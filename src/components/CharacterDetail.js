@@ -3,7 +3,7 @@ import React from 'react'
 const CharacterList = () => {
       return(
           <div>
-          Character list component
+          Character Detail component
           </div>
       )
 }
