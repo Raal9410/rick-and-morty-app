@@ -2,16 +2,18 @@ import React, {useContext, useEffect} from 'react'
 import { Context } from '../context/context'
 import CharacterDetail from './CharacterDetail'
 
-const SingleCharacterView = () => {
+const SingleCharacterView = (props) => {
+    const id = props.match.params.id
     const {singleCharacter, fetchOneCharacter} = useContext(Context)
 
     useEffect(() => {
-        fetchOneCharacter()
+        fetchOneCharacter(id)
+        console.log(singleCharacter)
     }, []) //eslint-disable-line
 
     return(
         <div>
-        <CharacterDetail />
+        <CharacterDetail character={singleCharacter}/>
         </div>
     )
 }
