@@ -8,7 +8,7 @@ const AppRouter = () => (
       <div>
         <Switch>
           <Route path="/" component={RickAndMortyApp} exact={true} />
-          <Route path="/detail/:id" component={CharacterDetail}/>
+          <Route path="/detail/:id" component={CharacterDetail} />
         </Switch>
       </div>
     </BrowserRouter>
