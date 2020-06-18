@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const CharacterCard = ({character}) => {
     return (
@@ -8,6 +9,7 @@ const CharacterCard = ({character}) => {
             <h4>{character.status} - {character.species}</h4>
             Last known location:
             <h4>{character.location.name}</h4>
+            <Link to={`/detail/${character.id}`}>Details</Link>
         </div>
     )
 }
