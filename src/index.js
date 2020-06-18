@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import RickAndMortyApp from './components/RickAndMortyApp'
+import AppRouter from './routers/AppRouter';
 
 ReactDOM.render(
-  <RickAndMortyApp/>,
+  <AppRouter/>,
   document.getElementById('root')
 );
 
