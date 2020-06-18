@@ -1,14 +1,17 @@
-import React from 'react'
-
-import {useRickAndMortyAPI, Context} from '../context/context'
+import React, {useContext, useEffect} from 'react'
+import { Context } from '../context/context'
+import CharacterDetail from './CharacterDetail'
 
 const SingleCharacterView = () => {
-    const data = useRickAndMortyAPI()
+    const {singleCharacter, fetchOneCharacter} = useContext(Context)
+
+    useEffect(() => {
+        fetchOneCharacter()
+    }, []) //eslint-disable-line
+
     return(
         <div>
-            <Context.Provider value={data}>
-                Character View
-            </Context.Provider>
+        <CharacterDetail />
         </div>
     )
 }
