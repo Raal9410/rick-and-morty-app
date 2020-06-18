@@ -8,6 +8,7 @@ const SingleCharacterView = (props) => {
 
     useEffect(() => {
         fetchOneCharacter(id)
+        console.log(singleCharacter)
     }, []) //eslint-disable-line
 
     return(
