@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const CharacterCard = ({character}) => {
+    console.log(character)
     return (
         <div key={character.id}>
             <img src={character.image} alt={character.id}/>
