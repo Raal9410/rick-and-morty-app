@@ -12,3 +12,5 @@ const SingleCharacterView = () => {
         </div>
     )
 }
+
+export default SingleCharacterView
