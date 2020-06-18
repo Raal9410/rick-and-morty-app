@@ -7,7 +7,8 @@ const [state, setState] = useState({
     error: null,
     characters: [],
     page: 1,
-    character: {}
+    singleCharacter: {},
+    id: ''
   });
 
     //const [page, setPage] = useState(1)
@@ -64,6 +65,29 @@ const fetchCharacters = async (direction) => {
     }
   };
 
+const fecthOneCharacter = async () => {
+  setState(prevState => ({
+    ...prevState,
+    loading: true
+  }))
+    try{
+      const { 
+       data: {result} 
+       } = await API.get(`/character/${state.id}`)
+       setState(prevState => ({
+        ...prevState,
+        loading: false,
+        singleCharacter: result,
+      }));
+    } catch (e) {
+      setState(prevState => ({
+        ...prevState,
+      loading: false,
+      error: e.response && e.response.error ? e.response.error : e.message
+    }));
+  }
+}
+
 const nextPage = () => {
     if(state.page >= 1 || state.page <= 30){
       fetchCharacters('next')
@@ -76,7 +100,7 @@ const prevPage = () => {
     }
 
 }
-  return { ...state, fetchCharacters, nextPage, prevPage };
+  return { ...state, fetchCharacters, nextPage, prevPage, fecthOneCharacter };
 };
 
 const Context = createContext(null);
