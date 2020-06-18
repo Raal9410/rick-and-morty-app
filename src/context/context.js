@@ -6,7 +6,8 @@ const [state, setState] = useState({
     loading: false,
     error: null,
     characters: [],
-    page: 1
+    page: 1,
+    character: {}
   });
 
     //const [page, setPage] = useState(1)
@@ -26,8 +27,10 @@ const fetchCharacters = async (direction) => {
         setState(prevState => ({
           ...prevState,
           loading: false,
-          characters: results
+          characters: results,
+          page: prevState.page +1
         }));
+        return
       } if(direction === 'prev'){
         const {
           data: { results }
@@ -36,18 +39,22 @@ const fetchCharacters = async (direction) => {
         setState(prevState => ({
           ...prevState,
           loading: false,
+          characters: results,
+          page: prevState.page -1
+        }));
+        return
+      } else {
+        const {
+          data: { results }
+        } = await API.get(`/character/?page=${state.page}`);
+  
+        setState(prevState => ({
+          ...prevState,
+          loading: false,
           characters: results
         }));
+        return
       } 
-      const {
-        data: { results }
-      } = await API.get(`/character/?page=${state.page}`);
-
-      setState(prevState => ({
-        ...prevState,
-        loading: false,
-        characters: results
-      }));
     } catch (e) {
       setState(prevState => ({
         ...prevState,
@@ -55,42 +62,17 @@ const fetchCharacters = async (direction) => {
         error: e.response && e.response.error ? e.response.error : e.message
       }));
     }
-    // try {
-    //   const {
-    //     data: { results }
-    //   } = await API.get(`/character/?page=${state.page}`);
-
-    //   setState(prevState => ({
-    //     ...prevState,
-    //     loading: false,
-    //     characters: results
-    //   }));
-    // } catch (e) {
-    //   setState(prevState => ({
-    //     ...prevState,
-    //     loading: false,
-    //     error: e.response && e.response.error ? e.response.error : e.message
-    //   }));
-    // }
   };
 
 const nextPage = () => {
-    if(state.page < 30){
+    if(state.page >= 1 || state.page <= 30){
       fetchCharacters('next')
-        setState(prevState => ({
-            ...prevState,
-            page: prevState.page + 1,
-        }))
     }
 }
 
 const prevPage = () => {
-    if(state.page >= 1) {
+    if(state.page > 1) {
       fetchCharacters('prev')
-      setState(prevState => ({
-          ...prevState,
-          page: prevState.page - 1
-      }))
     }
 
 }
