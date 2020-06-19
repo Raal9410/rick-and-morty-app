@@ -71,7 +71,7 @@ const fetchOneCharacter = async (id) => {
   }))
     try{
       const { 
-       data: {result} 
+       data: result
        } = await API.get(`/character/${id}`)
        setState(prevState => ({
         ...prevState,
@@ -99,7 +99,7 @@ const prevPage = () => {
     }
 
 }
-  return { ...state, fetchCharacters, nextPage, prevPage, fetchOneCharacter };
+  return { ...state, fetchCharacters, nextPage, prevPage, fetchOneCharacter}
 };
 
 const Context = createContext(null);
