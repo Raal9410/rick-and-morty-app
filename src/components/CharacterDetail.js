@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const Container = styled.div `
   display: flex;
   width: 99vw;
+  height: 100vh;
   justify-content: space-around;
   flex-direction: column;
   @media(min-width: 600px){
