@@ -90,7 +90,7 @@ const Text3 = styled.h5 `
 const TextContent = styled.div `
     margin-left: 1rem;
     justify-content: space-evenly;
-    @media(mid-width: 600px){
+    @media(min-width: 600px){
         margin-left: 0;
         justify-content: space-evenly;
     }
