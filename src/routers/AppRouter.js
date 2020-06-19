@@ -1,6 +1,6 @@
 import React from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import RickAndMortyApp from '../components/RickAndMortyApp'
+import CharacterList from '../components/CharacterList'
 import SingelCharacter from '../components/SingleCharacter'
 import { useRickAndMortyAPI, Context } from '../context/context'
 
@@ -11,7 +11,7 @@ const AppRouter = () => {
     <BrowserRouter>
       <div>
         <Switch>
-          <Route path="/" component={RickAndMortyApp} exact={true} />
+          <Route path="/" component={CharacterList} exact={true} />
           <Route path="/detail/:id" component={SingelCharacter} />
         </Switch>
       </div>
