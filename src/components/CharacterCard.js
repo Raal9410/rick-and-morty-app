@@ -21,6 +21,16 @@ const Card = styled.div `
         flex-direction: column;
         justify-content: space-evenly;
   }
+  @media (max-width: 400px){
+    background: #EDE7F6;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: 18rem;
+    margin: .5rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: row;
+  }
 `
 const Image = styled.img `
     width: 8rem;

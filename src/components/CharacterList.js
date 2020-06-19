@@ -4,7 +4,8 @@ import CharacterCard from './CharacterCard'
 import styled from 'styled-components'
 
 const Characters = styled.div `
-  margin: 2rem
+  margin: 2remñ
+  display: flex;
 `
 const Grid = styled.div `
   display: grid;
