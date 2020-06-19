@@ -3,6 +3,9 @@ import { Context } from '../context/context'
 import CharacterCard from './CharacterCard'
 import styled from 'styled-components'
 
+const Characters = styled.div `
+  margin: 2rem
+`
 const Grid = styled.div `
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
@@ -62,7 +65,7 @@ const CharacterList = () => {
         fetchCharacters()
     }, []) //eslint-disable-line
       return(
-        <div>
+        <Characters>
         <ImageContainer>
           <Image src='https://upload.wikimedia.org/wikipedia/en/c/c8/Rick_and_Morty_logo.png' alt="rmlogo"/>
         </ImageContainer>
@@ -77,7 +80,7 @@ const CharacterList = () => {
             <Button onClick={prevPage}>Previous</Button>
             </ButtonFixed>
           </ButtonContainer>
-        </div>
+        </Characters>
       )
 }
 
