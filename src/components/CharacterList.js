@@ -5,17 +5,18 @@ import styled from 'styled-components'
 
 const Characters = styled.div `
   margin: 2rem
+  display: flex;
 `
 const Grid = styled.div `
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-gap: 1rem;
+  justify-content: space-evenly;
   padding-bottom: 1.5rem;
 `
 const ImageContainer = styled.div `
   display: flex;
   justify-content: center;
-  }
 `
 const Image = styled.img `
   width: 20rem;
@@ -51,7 +52,11 @@ const Button = styled.button `
 `
 const ButtonFixed = styled.div `
   position: fixed;
+  bottom: 1.5rem;
+@media(min-width: 600px){
+  position: fixed;
   bottom: 1rem;
+}
 `
 const ButtonContainer = styled.div `
   display: flex;
