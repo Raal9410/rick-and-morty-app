@@ -13,7 +13,10 @@ const DetailContainer = styled.div `
         height: 96vh;
         width: 99vw;
         margin: 0;
-    }
+    };
+    @media(max-width: 400px){
+        width: auto;
+    };
 `
 const Button = styled.button `
   display: inline-block;
