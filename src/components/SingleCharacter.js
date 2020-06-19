@@ -5,14 +5,14 @@ import styled from 'styled-components'
 
 const DetailContainer = styled.div `
     background-color:#EDE7F6;
-    height: 96vh;
-    width: 99vw;
-    margin: 0
+    height: auto;
+    width: 100vw;
+    margin: 0;
     @media(min-width: 600px){
         background-color:#EDE7F6;
         height: 96vh;
         width: 99vw;
-        margin: 0
+        margin: 0;
     }
 `
 const Button = styled.button `
@@ -24,7 +24,7 @@ const Button = styled.button `
   border: 2px solid #aaec4d;
   margin-top: 0.5rem
   border-radius: 3px;
-  margin-left: 10px;
+  margin-left: 0px;
   background: #e3e3e3;
   @media(min-width: 600px){
     &:hover{
