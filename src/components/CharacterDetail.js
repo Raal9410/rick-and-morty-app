@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Container = styled.div `
   display: flex;
-  width: 100vw;
+  width: 99vw;
   justify-content: space-around;
   flex-direction: column;
   @media(min-width: 600px){
