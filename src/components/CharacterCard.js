@@ -15,7 +15,7 @@ const Card = styled.div `
         background: #EDE7F6;
         padding: 1rem;
         border-radius: 1rem;
-        width: 20rem;
+        width: 18rem;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -29,7 +29,7 @@ const Image = styled.img `
     @media(min-width: 600px){
         width: 12rem;
         border-radius: 1em;
-        margin-left: 3.5rem;
+        margin-left: 2.8rem;
     }
 `
 const Title = styled.h2 `
