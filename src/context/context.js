@@ -30,7 +30,6 @@ const fetchCharacters = async (direction) => {
           characters: results,
           page: prevState.page +1
         }));
-        return
       } if(direction === 'prev'){
         const {
           data: { results }
@@ -42,7 +41,6 @@ const fetchCharacters = async (direction) => {
           characters: results,
           page: prevState.page -1
         }));
-        return
       } else {
         const {
           data: { results }
@@ -53,7 +51,6 @@ const fetchCharacters = async (direction) => {
           loading: false,
           characters: results
         }));
-        return
       } 
     } catch (e) {
       setState(prevState => ({
