@@ -27,7 +27,7 @@ const Card = styled.div `
     border-radius: 1rem;
     width: 18rem;
     margin: .5rem;
-    height: 10rem;
+    height: 11rem;
     display: flex;
     flex-direction: row;
   }
