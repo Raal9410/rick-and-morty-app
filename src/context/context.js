@@ -10,8 +10,6 @@ const [state, setState] = useState({
     singleCharacter: {}
   });
 
-    //const [page, setPage] = useState(1)
-
 const fetchCharacters = async (direction) => {
     setState(prevState => ({
       ...prevState,
