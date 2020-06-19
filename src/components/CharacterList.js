@@ -83,8 +83,8 @@ const CharacterList = () => {
           </Grid>
           <ButtonContainer>
           <ButtonFixed>
-            <Button onClick={nextPage}>Next</Button>
             <Button onClick={prevPage}>Previous</Button>
+            <Button onClick={nextPage}>Next</Button>
             </ButtonFixed>
           </ButtonContainer>
         </Characters>
