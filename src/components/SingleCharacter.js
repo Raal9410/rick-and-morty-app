@@ -25,10 +25,12 @@ const Button = styled.button `
   margin-top: 0.5rem
   border-radius: 3px;
   margin-left: 10px;
+  background: #e3e3e3;
   @media(min-width: 600px){
     &:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   };
+    background: #e3e3e3;
     display: inline-block;
     color:  #32bcd0;
     font-size: 1rem;
