@@ -7,7 +7,7 @@ const Container = styled.div `
   justify-content: space-around;
   flex-direction: column;
   @media(min-width: 600px){
-    width: 100vw;
+    width: 90vw;
     height: 90vh;
     display: flex;
     flex-direction: row;
