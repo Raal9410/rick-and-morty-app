@@ -32,6 +32,7 @@ const Card = styled.div `
     flex-direction: row;
   }
 `
+
 const Image = styled.img `
     width: 8rem;
     border-radius: 50%;
